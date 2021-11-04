@@ -18,50 +18,50 @@ block.appendChild(img);
 // Task #3
 const users = [
     {
-      id: 7,
+      id: 1,
       email: "michael.lawson@reqres.in",
       first_name: "Michael",
       last_name: "Lawson",
-      avatar: " https://i.ytimg.com/vi/VEx5hNYeZtY/hqdefault.jpg"
+      avatar: " https://reqres.in/img/faces/7-image.jpg"
     },
     {
-      id: 8,
+      id: 2,
       email: "lindsay.ferguson@reqres.in",
       first_name: "Lindsay",
       last_name: "Ferguson",
-      avatar: " https://i.ytimg.com/vi/VEx5hNYeZtY/hqdefault.jpg"
+      avatar: " https://reqres.in/img/faces/8-image.jpg"
     },
     {
-      id: 9,
+      id: 3,
       email: "tobias.funke@reqres.in",
       first_name: "Tobias",
       last_name: "Funke",
-      avatar: " https://i.ytimg.com/vi/VEx5hNYeZtY/hqdefault.jpg"
+      avatar: " https://reqres.in/img/faces/9-image.jpg"
     },
     {
-      id: 10,
+      id: 4,
       email: "byron.fields@reqres.in",
       first_name: "Byron",
       last_name: "Fields",
       avatar: "https://reqres.in/img/faces/10-image.jpg"
     },
   ];
+
   function renderUser(){
-    const userListContainer = document.querySelector('#user-list-container');
-    const userTableBody = userTableContainer.querySelector('tbody');
-  
+    const userTable = document.querySelector('#user-list');
+    const userTableBody = userTable.querySelector('p');
+
     const userItems = users.map(user => {
-      return `<tr>
-                  <td>${user.id}</td>
-                  <td>${user.email}</td>
-                  <td>${user.first_name}</td>
-                  <td>${user.last_name}</td>
-                  <td><img alt="${user.first_name}" src="${user.avatar}" /></td>
-                  <td><button data-user-id="${user.id}" class="user-remove" type="button">Delete</button></td>
-              </tr>`;
+      return` 
+            <p>${user.id}</p>
+            <p>${user.email}</p>
+            <p>${user.first_name}</p>
+            <p>${user.last_name}</p>
+            <img alt="${user.first_name}" src="${user.avatar}" />
+            // <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
+            `;
     });
-    // console.log(userItems);
     userTableBody.innerHTML = userItems.join('');
-  }
+};
   
   renderUser();
