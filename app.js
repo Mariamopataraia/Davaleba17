@@ -48,8 +48,8 @@ const users = [
   ];
 
   function renderUser(){
-    const userTable = document.querySelector('#user-list');
-    const userTableBody = userTable.querySelector('p');
+    const userTableContainer = document.querySelector('#user-list');
+    const userTableBody = userTableContainer.querySelector('p');
 
     const userItems = users.map(user => {
       return` 
@@ -58,7 +58,7 @@ const users = [
             <p>${user.first_name}</p>
             <p>${user.last_name}</p>
             <img alt="${user.first_name}" src="${user.avatar}" />
-            // <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
+            <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
             `;
     });
     userTableBody.innerHTML = userItems.join('');
