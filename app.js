@@ -57,11 +57,10 @@ const users = [
             <div>
                 <img alt="${user.first_name}" src="${user.avatar}" />
                 <p>${user.id}</p>
-                // <p>${user.email}</p>
                 <p>${user.first_name}</p>
                 <p>${user.last_name}</p>
                 <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
-                <button data-user-id="${user.id}" class="user-remove" type="button">Info</button>
+                <button data-user-id="${user.id}" class="user-show" type="button">Info</button>
             <div>
             `
     });
@@ -71,13 +70,48 @@ const users = [
   renderUser();
 
 //   Task #4
-    const removeBtn = document.querySelectorAll(`.user-remove`);
-    console.log(removeBtn);
+const removeBtn = document.querySelectorAll(`.user-remove`);
+console.log(removeBtn);
 
-    removeBtn.forEach(btn => {
-        btn.addEventListener(`click`, (e) => {
-            // console.log(e.target)
-            const p = e.target.parentNode;
-            p.remove();
-        })
+removeBtn.forEach(btn => {
+    btn.addEventListener(`click`, (e) => {
+        // console.log(e.target)
+        const p = e.target.parentNode;
+        p.remove();
     })
+})
+
+// function toggleClock() {
+// const myClock = document.getElementById('user.email');
+// const displaySetting = myClock.style.display;
+// const clockButton = document.getElementById('user.email');
+// if (displaySetting == 'block') {
+//     // clock is visible. hide it
+//     myClock.style.display = 'none';
+//     // change button text
+//     clockButton.innerHTML = 'email';
+//   }
+//   else {
+//     // clock is hidden. show it
+//     myClock.style.display = 'block';
+//     // change button text
+//     clockButton.innerHTML = 'email';
+//   }
+// }
+
+// function before(){
+//     document.getElementById('user.email')
+//     // .src="img/photo1.jpg";
+//     document.getElementById('message')
+//     .innerHTML="Info";
+// }
+ 
+// function afterr(){
+//     document.getElementById('user.email')
+//     // .src="img/photo2.jpg";
+//     document.getElementById('message')
+//     .innerHTML="email";
+// }
+
+
+{/* <p>${user.email}</p> */}
