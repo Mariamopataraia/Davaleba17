@@ -59,6 +59,7 @@ const users = [
                 <p>${user.id}</p>
                 <p>${user.first_name}</p>
                 <p>${user.last_name}</p>
+                <p>${user.email}</p>
                 <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
                 <button data-user-id="${user.id}" class="user-show" type="button">Info</button>
             <div>
@@ -114,4 +115,4 @@ removeBtn.forEach(btn => {
 // }
 
 
-{/* <p>${user.email}</p> */}
+{/*  */}
