@@ -45,7 +45,7 @@ const users = [
       last_name: "Fields",
       avatar: "https://reqres.in/img/faces/10-image.jpg"
     },
-  ];
+];
 
   function renderUser(){
     const userTableContainer = document.querySelector('#user-list');
@@ -57,7 +57,7 @@ const users = [
             <div>
                 <img alt="${user.first_name}" src="${user.avatar}" />
                 <p>${user.id}</p>
-                <p>${user.email}</p>
+                // <p>${user.email}</p>
                 <p>${user.first_name}</p>
                 <p>${user.last_name}</p>
                 <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
@@ -69,3 +69,15 @@ const users = [
     userTableBody.innerHTML = userItems.join('');
 };
   renderUser();
+
+//   Task #4
+    const removeBtn = document.querySelectorAll(`.user-remove`);
+    console.log(removeBtn);
+
+    removeBtn.forEach(btn => {
+        btn.addEventListener(`click`, (e) => {
+            // console.log(e.target)
+            const p = e.target.parentNode;
+            p.remove();
+        })
+    })
