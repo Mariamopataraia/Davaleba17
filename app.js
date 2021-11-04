@@ -61,7 +61,7 @@ const users = [
                 <p>${user.last_name}</p>
                 <p>${user.email}</p>
                 <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
-                <button data-user-id="${user.id}" class="user-show" type="button">Info</button>
+                <button data-user-id="${user.id}" class="infobtn" type="button">Info</button>
             <div>
             `
     });
@@ -83,9 +83,9 @@ removeBtn.forEach(btn => {
 })
 
 // function toggleClock() {
-// const myClock = document.getElementById('user.email');
+// const myClock = document.getElementById('user-list');
 // const displaySetting = myClock.style.display;
-// const clockButton = document.getElementById('user.email');
+// const clockButton = document.getElementById('user-list');
 // if (displaySetting == 'block') {
 //     // clock is visible. hide it
 //     myClock.style.display = 'none';
@@ -114,5 +114,16 @@ removeBtn.forEach(btn => {
 //     .innerHTML="email";
 // }
 
+// const infobtn = document.querySelector (`infobtn`);
+// function ShowAndHide() {
+    let div = document.getElementById('div');
+    let btn = document.querySelector('button')
 
-{/*  */}
+    btn.addEventListener('click', () => {
+    if (div.style.display == 'none') {
+        div.style.display = 'block';
+    } else {
+        div.style.display = 'none';
+    }
+    }
+    )
