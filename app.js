@@ -17,12 +17,12 @@ block.appendChild(img);
 
 // Task #3
 const users = [
-    {
-      id: 1,
-      email: "michael.lawson@reqres.in",
+    {      
+      avatar: " https://reqres.in/img/faces/7-image.jpg",
       first_name: "Michael",
       last_name: "Lawson",
-      avatar: " https://reqres.in/img/faces/7-image.jpg"
+      email: "michael.lawson@reqres.in",
+      id: 1,
     },
     {
       id: 2,
