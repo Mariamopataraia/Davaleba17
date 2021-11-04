@@ -17,12 +17,12 @@ block.appendChild(img);
 
 // Task #3
 const users = [
-    {      
-      avatar: " https://reqres.in/img/faces/7-image.jpg",
-      first_name: "Michael",
-      last_name: "Lawson",
-      email: "michael.lawson@reqres.in",
-      id: 1,
+    { 
+    id: 1, 
+    email: "michael.lawson@reqres.in",   
+    first_name: "Michael",
+    last_name: "Lawson",
+    avatar: " https://reqres.in/img/faces/7-image.jpg",
     },
     {
       id: 2,
@@ -50,18 +50,22 @@ const users = [
   function renderUser(){
     const userTableContainer = document.querySelector('#user-list');
     const userTableBody = userTableContainer.querySelector('p');
+    // userTableBody.style.display = 'none'
 
     const userItems = users.map(user => {
       return` 
-            <p>${user.id}</p>
-            <p>${user.email}</p>
-            <p>${user.first_name}</p>
-            <p>${user.last_name}</p>
-            <img alt="${user.first_name}" src="${user.avatar}" />
-            <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
-            `;
+            <div>
+                <img alt="${user.first_name}" src="${user.avatar}" />
+                <p>${user.id}</p>
+                <p>${user.email}</p>
+                <p>${user.first_name}</p>
+                <p>${user.last_name}</p>
+                <button data-user-id="${user.id}" class="user-remove" type="button">Delete</button>
+                <button data-user-id="${user.id}" class="user-remove" type="button">Info</button>
+            <div>
+            `
     });
+
     userTableBody.innerHTML = userItems.join('');
 };
-  
   renderUser();
